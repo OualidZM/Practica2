@@ -19,7 +19,20 @@ public static final Logica  logica = new Logica();
 
     public static void name() {
 
+        try {
 
+            System.out.println("\t" + "@||||||@ Practica 2 @||||||@"
+            + "\n" + "\n" +"\t" + 
+
+                "[0]" + " " + " " + "Run program"   
+                        + "\n" +"\t" +
+
+                "[99]" + " " + "Quit program" );
+        }
+
+        catch (Exception e) {
+            System.out.println("SOMETHING WENTTTTT WRONG");
+        }
     }
 
 
