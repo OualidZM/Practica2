@@ -13,6 +13,11 @@ public class Logica {
     public static List listt2;
 
     public static final Scanner input = new Scanner(System.in);
+    private int valuespositivos = 0; //Si el valor es positivo se ira acumulando aqui
+    private int valuesnegativos = 0; //Si el valor es negativo se ira acumulando aqui
+    private int contadordeCeros = 0; //si es 0, los contara
+    private int contadorNumPositivos = 0; // esta variable se encargara de contar las veces que se metieron un numero positivo
+    private int contadorNumNegativos = 0; // esta variable se encargara de contar las veces que se metieron un numero negativo
 
 
     Logica(){
@@ -40,9 +45,33 @@ public class Logica {
     }
 
 
-public void  method3(){
-    
-}
+    public void method3() {
+        
+        for (int i=0;i<5;i++){
+            System.out.println("Please enter a positive or negative number:");
+            int val = input.nextInt();
+            if( val == 0) {
+                contadordeCeros++;
+            }
+            else if (val > 0){
+                    valuespositivos += val;
+                    contadorNumPositivos++;
+            }
+
+            else{
+                if (val < 0){
+                    valuesnegativos += val;
+                    contadorNumNegativos++;
+                }
+            }
+        }
+    System.out.println("-Ceros:" +  contadordeCeros  + "\n" +
+                       "-Positivos:" +  valuespositivos/contadorNumPositivos + "\n" + 
+                       "-Negativos:" +  valuesnegativos/contadorNumNegativos + "\n" + "\n" + "\n" +
+                       "*Type 0 to return to the \"MENU\""
+                       );
+
+    }
 
 
 public void  method4(){
