@@ -89,9 +89,16 @@ public class Logica {
     }
 
 
-public void  method5(){
-    
-}
+    public void method5() {
+        System.out.println("Enter a phrase:");
+        String phrase = input.nextLine();
+        StringBuilder sb = new StringBuilder(phrase);
+        System.out.println(MessageFormat.format("-The  reverse of \"{0}\"", phrase) + " is: " +  "\n" + sb.reverse() 
+        + "\n" + "\n" + "\n" +
+        "Type 0 to return to the \"MENU\""
+        );
+        
+    }
 
 
 public void  method6(){
