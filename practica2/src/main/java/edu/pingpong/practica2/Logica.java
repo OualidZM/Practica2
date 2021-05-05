@@ -27,6 +27,8 @@ public class Logica {
 
     Logica(){
         this.listt = new ArrayList<>();
+        this.listt2 = new ArrayList<>();
+
     }
 
 
@@ -48,7 +50,9 @@ public class Logica {
 
         }
         Collections.reverse(listt2);
-            System.out.println("Result:" +  listt2 );
+            System.out.println("Result:" +  listt2  +
+            "\n" + "\n" + "\n" + "*Type 0 to return to the \"MENU\""
+            );
     }
 
 
