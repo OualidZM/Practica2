@@ -36,7 +36,9 @@ public class Logica {
             System.out.println("Please enter a positive number:");  
             listt.add(input.nextInt()); 
         }
-            System.out.println("Result:"  + listt);
+            System.out.println("Result:"  + listt +
+            "\n" + "\n" + "\n" + "Type 0 to return to the \"MENU\""
+            );
     }
 
     public void method2() {
@@ -46,7 +48,10 @@ public class Logica {
 
         }
         Collections.reverse(listt2);
-            System.out.println("Result:" +  listt2 );
+            System.out.println("Result:" +  listt2  +
+            "\n" + "\n" + "\n" + "Type 0 to return to the \"MENU\""
+            
+            );
     }
 
 
@@ -70,9 +75,10 @@ public class Logica {
                 }
             }
         }
-    System.out.println("-Ceros:" +  contadordeCeros  + "\n" +
-                       "-Positivos:" +  valuespositivos/contadorNumPositivos + "\n" + 
-                       "-Negativos:" +  valuesnegativos/contadorNumNegativos + "\n" + "\n" + "\n" +
+    System.out.println("-Positivos:" +  valuespositivos/contadorNumPositivos + "\n" + 
+                       "-Negativos:" +  valuesnegativos/contadorNumNegativos + "\n" +
+                       "-Ceros:" +  contadordeCeros  
+                       + "\n" + "\n" + "\n" +
                        "*Type 0 to return to the \"MENU\""
                        );
 
@@ -123,7 +129,8 @@ public class Logica {
         System.out.println("Enter a phrase:");
         String secondphras = secondphrase.nextLine();
         String noSpacesecond = secondphras.replaceAll("\\s+", "");
-        System.out.println(noSpacefirst + noSpacesecond);
+        System.out.println(
+            MessageFormat.format("The concatenation of \"{0}\" and \"{1}\" without spaces will look like this:",firstphras,secondphras) + "\n" + "-" + noSpacefirst + noSpacesecond);
 
     }
 
@@ -141,20 +148,32 @@ public class Logica {
 
 
 
-public void  method9(){
+    public void method9() {
+
+        System.out.println("Enter a phrase:");
+        String value = input.nextLine();
+        char[] ascii = value.toCharArray();
+        
+        for (int i=0;i<ascii.length;i++){
+
+            System.out.println("The ascii of the letter " + "\"" + ascii[i] + "\""  + " is: " + " " +  "[" + (int)value.charAt(i) + "]"
+            ) ;
+        }
+        System.out.println("\n" + "\n" + "\n" + "Type 0 to return to the \"MENU\"");
+        
+    }
+
+
+
+
+
+
+
+
+
     
-}
 
-
-
-
-
-
-
-
-    
-
-public int Switch() {
+public int switchh() {
     
     int menuu =  app.menu.nextInt();
     switch (menuu) {
@@ -198,6 +217,8 @@ public int Switch() {
         System.out.println("wrong!");
             break;
         }
+    return menuu;
+
     }
 
 }
