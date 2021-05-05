@@ -15,15 +15,15 @@ public static  boolean salir = false;
     public static void main( String[] args )
     {
 
-        name();
+        program();
 
     }
 
-    public static void name() {
+    public static void program() {
 
         try {
 
-            System.out.println("\t" + "@||||||@ Practica 2 @||||||@"
+            System.out.println("\t" + "|||||| Practica 2 ||||||"
             + "\n" + "\n" +"\t" + 
 
                 "[0]" + " " + " " + "Run program"   
@@ -38,7 +38,7 @@ public static  boolean salir = false;
 
                 if(startProgram.hasNextLine()){
 
-                System.out.println("\t" + "@||||||@ Practica 2 @||||||@"
+                System.out.println("\t" + "|||||| Practica 2 ||||||"
                 + "\n" + "\n" +"\t" + 
                 "Elige la Opcion que quiere realizar:" 
                 + "\n" + "\n" +"\t" +
@@ -71,6 +71,15 @@ public static  boolean salir = false;
                     logica.Switch();
                         
                     }
+
+
+                
+                else{
+                    if (run == 99 || menuu ==  99){
+                        System.out.println("Thanks for using the program!");
+                        break;
+                    }
+                }
                 
             }while(!salir);
         }
