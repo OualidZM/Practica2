@@ -101,10 +101,16 @@ public class Logica {
     }
 
 
-public void  method6(){
-    
-}
-
+    public void method6() {
+        System.out.println("Enter a phrase:");
+        String phrase = input.nextLine();
+        String noSpace = phrase.replaceAll("\\s+", "");
+        System.out.println(MessageFormat.format("-The phrase \"{0}\"", phrase) + " without space, will return this: " + noSpace 
+        + "\n" + "\n" + "\n" +
+        "Type 0 to return to the \"MENU\""
+        );
+        
+    }
 
 public void  method7(){
     
