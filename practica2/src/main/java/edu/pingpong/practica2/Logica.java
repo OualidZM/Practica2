@@ -9,34 +9,34 @@ import java.util.Scanner;
 public class Logica {
     
 
-    public static final App app = new App();
-    public static List listt;
-    public static List listt2;
+    public static final App app = new App(); // Creamos un objeto de App
+    public static List listt; //Creamos una lista
+    public static List listt2; //Creamos otra lista
 
-    public static final Scanner input = new Scanner(System.in);
-    public static final Scanner firstphrase = new Scanner(System.in);
-    public static final Scanner secondphrase = new Scanner(System.in);
-    public static final Scanner vowel = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in); // Creamos un objeto Scanner
+    public static final Scanner firstphrase = new Scanner(System.in); // Creamos un objeto Scanner
+    public static final Scanner secondphrase = new Scanner(System.in); // Creamos un objeto Scanner
+    public static final Scanner vowel = new Scanner(System.in); // Creamos un objeto Scanner
 
-    private int valuespositivos = 0;
-    private int valuesnegativos = 0;
-    private int contadordeCeros = 0;
-    private int contadorNumPositivos = 0; 
-    private int contadorNumNegativos = 0;
+    private int valuespositivos = 0; //Creamos una variable int que sumara los valores positivos
+    private int valuesnegativos = 0; //Creamos una variable int que sumara los valores negativos
+    private int contadordeCeros = 0; //si el valor dado es 0 entonces,se sumara +1 al contador
+    private int contadorNumPositivos = 0;  //es un contador de números positivos
+    private int contadorNumNegativos = 0; //es un contador de números negativos
 
 
     Logica(){
-        this.listt = new ArrayList<>();
-        this.listt2 = new ArrayList<>();
+        this.listt = new ArrayList<>(); //Inicializamos el array
+        this.listt2 = new ArrayList<>(); //Inicializamos el array
 
     }
 
 
     public static void getFiveNumbers() {
         
-        while (listt.size() < 5) {   
+        while (listt.size() < 5) {   //si la lista es menor que 5, entonces seguirá el bucle
             System.out.println("Please enter a positive number:");  
-            listt.add(input.nextInt()); 
+            listt.add(input.nextInt()); //se añadirá a la lista
         }
             System.out.println("-Result:"  + listt +
             "\n" + "\n" + "\n" + "*Type 0 to return to the \"MENU\""
@@ -44,12 +44,12 @@ public class Logica {
     }
 
     public void getFiveNumbersInverted() {
-        while (listt2.size() < 5) {   
+        while (listt2.size() < 5) {  //si la lista es menor que 5, entonces seguirá el bucle
             System.out.println("Please enter a positive number:");  
-            listt2.add(input.nextInt());
+            listt2.add(input.nextInt()); //se añadirá a la lista
 
         }
-        Collections.reverse(listt2);
+        Collections.reverse(listt2); //Devolverá los valores al revés
             System.out.println("Result:" +  listt2  +
             "\n" + "\n" + "\n" + "*Type 0 to return to the \"MENU\""
             );
@@ -61,22 +61,23 @@ public class Logica {
         for (int i=0;i<5;i++){
             System.out.println("Please enter a positive or negative number:");
             int val = input.nextInt();
-            if( val == 0) {
+            if( val == 0) { //si el valor es igual a 0, este añadirá +1 al contador contadorNumPostivos
                 contadordeCeros++;
             }
-            else if (val > 0){
+            else if (val > 0){ //si el valor el mayor que 0 entonces este sumara el input a la variable valuespositivos y añadirá +1 al contador de contadorNumPositivos
                     valuespositivos += val;
                     contadorNumPositivos++;
             }
 
             else{
-                if (val < 0){
+                if (val < 0){ //si el valor es menor que 0 entonces este sumara el input a la variable valuesnegativos y añadirá +1 al contador de contadorNumNegativos
                     valuesnegativos += val;
                     contadorNumNegativos++;
                 }
             }
-        }
-    System.out.println("-Positivos:" +  valuespositivos/contadorNumPositivos + "\n" + 
+        } //para sacar la media tenemos que hacer la suma de todos los números % los números que hay
+
+    System.out.println("-Positivos:" +  valuespositivos/contadorNumPositivos + "\n" + //para sacar la media
                        "-Negativos:" +  valuesnegativos/contadorNumNegativos + "\n" +
                        "-Ceros:" +  contadordeCeros  
                        + "\n" + "\n" + "\n" +
@@ -88,10 +89,10 @@ public class Logica {
 
     public void getphraselenght() {
 
-        System.out.println("Enter a phrase:");
+        System.out.println("Enter a phrase:"); //pedimos input
         String phrase = input.nextLine();
-        String noSpace = phrase.replaceAll("\\s+", "");
-        int count = noSpace.length();
+        String noSpace = phrase.replaceAll("\\s+", ""); //quitamos los espacios en blanco
+        int count = noSpace.length(); //encontramos la longitud  de  este
         System.out.println(MessageFormat.format("La longitud de \"{0}\"", phrase) + " es de: " + "\n" +
         "-[" + count + "]"
         + "\n" + "\n" + "\n" +
@@ -102,11 +103,11 @@ public class Logica {
 
 
     public void getPhraseInverted() {
-        System.out.println("Enter a phrase:");
+        System.out.println("Enter a phrase:"); //pedimos input
         String phrase = input.nextLine();
-        StringBuilder sb = new StringBuilder(phrase);
+        StringBuilder sb = new StringBuilder(phrase); //Creamos objeto de StringBuilder
         System.out.println(MessageFormat.format("The  reverse of \"{0}\"", phrase) + " is: " +  "\n" +
-        "-" + sb.reverse() 
+        "-" + sb.reverse() //revertimos el valor dado al inicio
         + "\n" + "\n" + "\n" +
         "*Type 0 to return to the \"MENU\""
         );
@@ -115,9 +116,9 @@ public class Logica {
 
 
     public void getPhraseNoSpace() {
-        System.out.println("Enter a phrase:");
+        System.out.println("Enter a phrase:"); //pedimos input
         String phrase = input.nextLine();
-        String noSpace = phrase.replaceAll("\\s+", "");
+        String noSpace = phrase.replaceAll("\\s+", ""); //quitamos los espacios en blanco
         System.out.println(MessageFormat.format("The phrase \"{0}\"", phrase) + " without space, will return this: " + "\n" +
         "-" + noSpace 
         + "\n" + "\n" + "\n" +
@@ -127,12 +128,12 @@ public class Logica {
     }
 
     public void concatenatePhrase() {
-        System.out.println("Enter a phrase:");
-        String firstphras = firstphrase.nextLine();
+        System.out.println("Enter a phrase:"); //pedimos input
+        String firstphras = firstphrase.nextLine(); //quitamos los espacios en blanco
         String noSpacefirst = firstphras.replaceAll("\\s+", "");
-        System.out.println("Enter a phrase:");
+        System.out.println("Enter a phrase:"); //pedimos input
         String secondphras = secondphrase.nextLine();
-        String noSpacesecond = secondphras.replaceAll("\\s+", "");
+        String noSpacesecond = secondphras.replaceAll("\\s+", ""); //quitamos los espacios en blanco
         System.out.println(
             MessageFormat.format("The concatenation of \"{0}\" and \"{1}\" without spaces will look like this:",firstphras,secondphras)  + "\n" +
             "-" + noSpacefirst + noSpacesecond + "\n" + "\n" + "\n" +
@@ -144,11 +145,11 @@ public class Logica {
 
     public void replaceForVowel() {
         
-        System.out.println("Enter a phrase:");
+        System.out.println("Enter a phrase:"); //pedimos input
         String phrase = input.nextLine();
-        System.out.println("Enter a vowel :");
+        System.out.println("Enter a vowel :"); //pedimos input
         String vowell  = vowel.nextLine();
-        String replace = phrase.replaceAll("[aeiouAEIOU]", vowell);
+        String replace = phrase.replaceAll("[aeiouAEIOU]", vowell); //remplazar todas las vocales por la vocal que da es usuario
         System.out.println(MessageFormat.format("You want to change all the vowels that are located in \"{0}\" for \"{1}\".",phrase,vowell)  +  "\n" +
         "This would look like this: " +  "\n" +
         "-" + replace 
@@ -163,11 +164,11 @@ public class Logica {
 
     public void getAscii() {
 
-        System.out.println("Enter a phrase:");
-        String value = input.nextLine();
-        char[] ascii = value.toCharArray();
+        System.out.println("Enter a phrase:"); // pedimos input
+        String value = input.nextLine(); 
+        char[] ascii = value.toCharArray(); //el valor dado, lo guardaremos en un char[]
         
-        for (int i=0;i<ascii.length;i++){
+        for (int i=0;i<ascii.length;i++){ //Recorreremos cada letra y de cada una devolveremos su ASCII
 
             System.out.println("-The ascii of the letter " + "\"" + ascii[i] + "\""  + " is: " + " " +  "[" + (int)value.charAt(i) + "]"
             ) ;
