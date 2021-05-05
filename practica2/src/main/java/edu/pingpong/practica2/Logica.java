@@ -1,5 +1,6 @@
 package edu.pingpong.practica2;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -74,9 +75,18 @@ public class Logica {
     }
 
 
-public void  method4(){
-    
-}
+    public void method4() {
+
+        System.out.println("Enter a phrase:");
+        String phrase = input.nextLine();
+        String noSpace = phrase.replaceAll("\\s+", "");
+        int count = noSpace.length();
+        System.out.println(MessageFormat.format("-La longitud de \"{0}\"", phrase) + " es de: " + count 
+        + "\n" + "\n" + "\n" +
+        "Type 0 to return to the \"MENU\""
+        );
+        
+    }
 
 
 public void  method5(){
