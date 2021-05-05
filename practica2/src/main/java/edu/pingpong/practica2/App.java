@@ -1,13 +1,26 @@
 package edu.pingpong.practica2;
+import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
+
+
+public static final Scanner startProgram = new Scanner(System.in);
+public static final Scanner menu = new Scanner(System.in);
+public static final Logica  logica = new Logica();
+
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        name();
+
     }
+
+    public static void name() {
+
+
+    }
+
+
 }
