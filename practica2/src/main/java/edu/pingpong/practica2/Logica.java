@@ -16,6 +16,8 @@ public class Logica {
     public static final Scanner input = new Scanner(System.in);
     public static final Scanner firstphrase = new Scanner(System.in);
     public static final Scanner secondphrase = new Scanner(System.in);
+    public static final Scanner vowel = new Scanner(System.in);
+
     private int valuespositivos = 0;
     private int valuesnegativos = 0;
     private int contadordeCeros = 0;
@@ -126,9 +128,16 @@ public class Logica {
     }
 
 
-public void  method8(){
-    
-}
+    public void method8() {
+        
+        System.out.println("Enter a phrase:");
+        String phrase = input.nextLine();
+        System.out.println("Enter a vowel :");
+        String vowell  = vowel.nextLine();
+        String replace = phrase.replaceAll("[aeiouAEIOU]", vowell);
+        System.out.println(replace);
+
+    }
 
 
 
