@@ -32,7 +32,7 @@ public class Logica {
     }
 
 
-    public static void method1() {
+    public static void getFiveNumbers() {
         
         while (listt.size() < 5) {   
             System.out.println("Please enter a positive number:");  
@@ -43,7 +43,7 @@ public class Logica {
             );
     }
 
-    public void method2() {
+    public void getFiveNumbersInverted() {
         while (listt2.size() < 5) {   
             System.out.println("Please enter a positive number:");  
             listt2.add(input.nextInt());
@@ -56,7 +56,7 @@ public class Logica {
     }
 
 
-    public void method3() {
+    public void getAverage() {
         
         for (int i=0;i<5;i++){
             System.out.println("Please enter a positive or negative number:");
@@ -86,7 +86,7 @@ public class Logica {
     }
 
 
-    public void method4() {
+    public void getphraselenght() {
 
         System.out.println("Enter a phrase:");
         String phrase = input.nextLine();
@@ -101,7 +101,7 @@ public class Logica {
     }
 
 
-    public void method5() {
+    public void getPhraseInverted() {
         System.out.println("Enter a phrase:");
         String phrase = input.nextLine();
         StringBuilder sb = new StringBuilder(phrase);
@@ -114,7 +114,7 @@ public class Logica {
     }
 
 
-    public void method6() {
+    public void getPhraseNoSpace() {
         System.out.println("Enter a phrase:");
         String phrase = input.nextLine();
         String noSpace = phrase.replaceAll("\\s+", "");
@@ -126,7 +126,7 @@ public class Logica {
         
     }
 
-    public void method7() {
+    public void concatenatePhrase() {
         System.out.println("Enter a phrase:");
         String firstphras = firstphrase.nextLine();
         String noSpacefirst = firstphras.replaceAll("\\s+", "");
@@ -142,7 +142,7 @@ public class Logica {
     }
 
 
-    public void method8() {
+    public void replaceForVowel() {
         
         System.out.println("Enter a phrase:");
         String phrase = input.nextLine();
@@ -161,7 +161,7 @@ public class Logica {
 
 
 
-    public void method9() {
+    public void getAscii() {
 
         System.out.println("Enter a phrase:");
         String value = input.nextLine();
@@ -191,39 +191,39 @@ public int switchh() {
     int menuu =  app.menu.nextInt();
     switch (menuu) {
         case 1:
-            method1();
+        getFiveNumbers();
             break;
 
         case 2:
-        method2();
+        getFiveNumbersInverted();
         break;
 
         case 3:
-        method3();
+        getAverage();
         break;
 
         case 4:
-        method4();
+        getphraselenght();
         break;
 
         case 5:
-        method5();
+        getPhraseInverted();
         break;
 
         case 6:
-        method6();
+        getPhraseNoSpace();
         break;
 
         case 7:
-        method7();
+        concatenatePhrase();
         break;
 
         case 8:
-        method8();
+        replaceForVowel();
         break;
         
         case 9:
-        method9();
+        getAscii();
         break;
 
         default:
