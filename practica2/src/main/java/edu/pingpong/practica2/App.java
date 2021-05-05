@@ -1,6 +1,7 @@
 package edu.pingpong.practica2;
 import java.util.Scanner;
 
+
 public class App 
 {
 
@@ -26,14 +27,9 @@ public static  boolean salir = false;
             System.out.println("\t" + "|||||| Practica 2 ||||||"
             + "\n" + "\n" +"\t" + 
 
-                "[0]" + " " + " " + "Run program"   
-                        + "\n" +"\t" +
-
-                "[99]" + " " + "Quit program" );
+                "[0]" + " " + " " + "Run program" );
 
         do{
-
-            int run = startProgram.nextInt();
 
 
                 if(startProgram.hasNextLine()){
@@ -52,7 +48,7 @@ public static  boolean salir = false;
                 + "\n" +"\t" +
                 "[5]" +  " " +  "ask for text and return it inverted"
                 + "\n" +"\t" +
-                "[6]" +  " " +  "Ask for two texts and return it without spaces"
+                "[6]" +  " " +  "Ask one text and return it without spaces"
                 + "\n" +"\t" +
                 "[7]" +  " " +  "Ask for two texts and concatenate them"
                 + "\n" +"\t" +
@@ -72,10 +68,8 @@ public static  boolean salir = false;
                         
                     }
 
-
-                
                 else{
-                    if (run == 99 || menuu ==  99){
+                    if (menuu == 99){
                         System.out.println("Thanks for using the program!");
                         break;
                     }
