@@ -6,10 +6,10 @@ public class App
 {
 
 
-public static final Scanner startProgram = new Scanner(System.in);
-public static final Scanner menu = new Scanner(System.in);
-public static final Logica  logica = new Logica();
-public static  boolean salir = false;
+public static final Scanner startProgram = new Scanner(System.in); // Creamos un objeto Scanner
+public static final Scanner menu = new Scanner(System.in); // Creamos un objeto Scanner
+public static final Logica  logica = new Logica(); // Creamos un objeto Scanner
+public static  boolean salir = false; //Creamos un booleano que servirá para mantener el bucle while activo
 
 
 
@@ -63,14 +63,14 @@ public static  boolean salir = false;
 
                 int menuu = menu.nextInt();
 
-                if(menuu != 99){
+                if(menuu != 99){  //si el input del usuario no equivale a 99, entonces se  cumple la condición
 
                     logica.switchh();
                         
                     }
 
                 else{
-                    if (menuu == 99){
+                    if (menuu == 99){ //si el input del usuario es 99, entonces este saldrá del bucle y del programa
                         System.out.println("Thanks for using the program!");
                         break;
                     }
@@ -80,7 +80,7 @@ public static  boolean salir = false;
         }
 
 
-        catch (Exception error) {
+        catch (Exception error) { //se ejecutará en caso de si hay algún error que no se pueda manejar
             System.out.println("Something went wrong!");
         }
     }
