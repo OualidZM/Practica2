@@ -31,6 +31,7 @@ public static  boolean salir = false;
 
         do{
 
+            int run = startProgram.nextInt();
 
                 if(startProgram.hasNextLine()){
 
