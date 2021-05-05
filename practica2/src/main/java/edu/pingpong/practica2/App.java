@@ -85,8 +85,8 @@ public static  boolean salir = false;
         }
 
 
-        catch (Exception e) {
-            System.out.println("SOMETHING WENTTTTT WRONG");
+        catch (Exception error) {
+            System.out.println("Something went wrong!");
         }
     }
 
