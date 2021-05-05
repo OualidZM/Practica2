@@ -68,7 +68,7 @@ public static  boolean salir = false;
 
                 if(menuu != 99){
 
-                    logica.Switch();
+                    logica.switchh();
                         
                     }
 
