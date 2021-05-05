@@ -63,6 +63,14 @@ public static  boolean salir = false;
                 "[99]" +  " " +  "-Quit program"
                 );
                 }
+
+                int menuu = menu.nextInt();
+
+                if(menuu != 99){
+
+                    logica.Switch();
+                        
+                    }
                 
             }while(!salir);
         }
