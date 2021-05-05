@@ -1,6 +1,7 @@
 package edu.pingpong.practica2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class Logica {
 
     public static final App app = new App();
     public static List listt;
+    public static List listt2;
+
     public static final Scanner input = new Scanner(System.in);
 
 
@@ -26,9 +29,15 @@ public class Logica {
             System.out.println("Result:"  + listt);
     }
 
-public void  method2(){
-    
-}
+    public void method2() {
+        while (listt2.size() < 5) {   
+            System.out.println("Please enter a positive number:");  
+            listt2.add(input.nextInt());
+
+        }
+        Collections.reverse(listt2);
+            System.out.println("Result:" +  listt2 );
+    }
 
 
 public void  method3(){
