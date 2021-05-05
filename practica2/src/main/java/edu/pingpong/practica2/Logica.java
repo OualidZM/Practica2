@@ -14,11 +14,13 @@ public class Logica {
     public static List listt2;
 
     public static final Scanner input = new Scanner(System.in);
-    private int valuespositivos = 0; //Si el valor es positivo se ira acumulando aqui
-    private int valuesnegativos = 0; //Si el valor es negativo se ira acumulando aqui
-    private int contadordeCeros = 0; //si es 0, los contara
-    private int contadorNumPositivos = 0; // esta variable se encargara de contar las veces que se metieron un numero positivo
-    private int contadorNumNegativos = 0; // esta variable se encargara de contar las veces que se metieron un numero negativo
+    public static final Scanner firstphrase = new Scanner(System.in);
+    public static final Scanner secondphrase = new Scanner(System.in);
+    private int valuespositivos = 0;
+    private int valuesnegativos = 0;
+    private int contadordeCeros = 0;
+    private int contadorNumPositivos = 0; 
+    private int contadorNumNegativos = 0;
 
 
     Logica(){
@@ -112,9 +114,16 @@ public class Logica {
         
     }
 
-public void  method7(){
-    
-}
+    public void method7() {
+        System.out.println("Enter a phrase:");
+        String firstphras = firstphrase.nextLine();
+        String noSpacefirst = firstphras.replaceAll("\\s+", "");
+        System.out.println("Enter a phrase:");
+        String secondphras = secondphrase.nextLine();
+        String noSpacesecond = secondphras.replaceAll("\\s+", "");
+        System.out.println(noSpacefirst + noSpacesecond);
+
+    }
 
 
 public void  method8(){
